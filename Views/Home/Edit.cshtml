@@ -1,0 +1,8 @@
+@model Dish;
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Edit @ViewBag.Details.DishName</h1>
+<form asp-action="EditDish" asp-route-DishID="@ViewBag.Details.DishId" method="Post" asp-controller="Home">
+    <partial name="FormPartial">
+</form>

@@ -1,0 +1,93 @@
+@model Dish;
+@if (ViewBag.Details != null)
+{
+    <div class="form-group">
+        <span class="text-danger" asp-validation-for="ChefName"></span>
+        <label asp-for="ChefName"></label>
+        <div>
+            <input value=@ViewBag.Details.ChefName class="form-control" asp-for="ChefName">
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="text-danger" asp-validation-for="DishName"></span>
+        <label asp-for="DishName"></label>
+        <div>
+            <input value=@ViewBag.Details.DishName class="form-control" asp-for="DishName">
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="text-danger" asp-validation-for="NumCalories"></span>
+        <label asp-for="NumCalories"></label>
+        <div>
+            <input value=@ViewBag.Details.NumCalories class="form-control" asp-for="NumCalories">
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="text-danger"  asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label>
+        <div>
+            <select class="form-control" asp-for="Tastiness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <span class="text-danger"  asp-validation-for="Desc"></span>
+        <label asp-for="Desc"></label>
+        <div>
+            <input value=@ViewBag.Details.Desc class="form-control" asp-for="Desc">
+        </div>
+    </div>
+    <input type="submit" value="Edit">
+}
+else
+{
+    <div class="form-group">
+        <span asp-validation-for="ChefName"></span>
+        <label asp-for="ChefName"></label>
+        <div>
+            <input class="form-control" asp-for="ChefName">
+        </div>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="DishName"></span>
+        <label asp-for="DishName"></label>
+        <div>
+            <input class="form-control" asp-for="DishName">
+        </div>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="NumCalories"></span>
+        <label asp-for="NumCalories"></label>
+        <div>
+            <input class="form-control" asp-for="NumCalories">
+        </div>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Tastiness"></span>
+        <label asp-for="Tastiness"></label>
+        <div>
+            <select class="form-control" asp-for="Tastiness">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="Desc"></span>
+        <label asp-for="Desc"></label>
+        <div>
+            <input class="form-control" asp-for="Desc">
+        </div>
+    </div>
+    <input type="submit" value="Add">
+}
